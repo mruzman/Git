@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="klijenti">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ime" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="prezime" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="adresa" Type="nchar" MaxLength="255" Nullable="false" />
+    <Property Name="oib" Type="nchar" MaxLength="13" Nullable="false" />
+    <Property Name="broj mobitela" Type="nchar" MaxLength="13" />
+  </EntityType>
+  <EntityContainer Name="DBModelStoreContainer">
+    <EntitySet Name="klijenti" EntityType="Self.klijenti" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
